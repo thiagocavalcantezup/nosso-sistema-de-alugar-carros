@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AlugaCarZupApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AlugaCarZupApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AlugaCarZupApplication.class, args);
+    }
 
 }

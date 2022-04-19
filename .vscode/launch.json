@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-AlugaCarZupApplication<aluga-car-zup>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "br.com.zup.edu.alugacarzup.AlugaCarZupApplication",
+      "projectName": "aluga-car-zup",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
