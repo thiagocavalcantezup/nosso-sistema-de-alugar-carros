@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Version;
 
 import br.com.zup.edu.alugacarzup.exceptions.CarroNaoDisponivelException;
 
@@ -28,6 +29,9 @@ public class Carro {
     private boolean disponivel;
 
     private String reservadoPara;
+
+    @Version
+    private int versao;
 
     public Carro(String modelo, Integer ano, String marca) {
         this.modelo = modelo;
