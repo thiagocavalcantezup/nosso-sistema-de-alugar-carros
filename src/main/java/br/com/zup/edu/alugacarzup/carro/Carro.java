@@ -27,6 +27,8 @@ public class Carro {
     @Column(nullable = false)
     private boolean disponivel;
 
+    private String reservadoPara;
+
     public Carro(String modelo, Integer ano, String marca) {
         this.modelo = modelo;
         this.ano = ano;
@@ -40,12 +42,13 @@ public class Carro {
     @Deprecated
     public Carro() {}
 
-    public void alugar() {
+    public void alugar(String reservadoPara) {
         if (!isDisponivel()) {
             throw new CarroNaoDisponivelException("O carro não está disponível para aluguel.");
         }
 
-        disponivel = false;
+        this.reservadoPara = reservadoPara;
+        this.disponivel = false;
     }
 
     public Long getId() {
