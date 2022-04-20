@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import br.com.zup.edu.alugacarzup.exceptions.CarroNaoDisponivelException;
+
 @Entity
 public class Carro {
 
@@ -38,8 +40,20 @@ public class Carro {
     @Deprecated
     public Carro() {}
 
+    public void alugar() {
+        if (!isDisponivel()) {
+            throw new CarroNaoDisponivelException("O carro não está disponível para aluguel.");
+        }
+
+        disponivel = false;
+    }
+
     public Long getId() {
         return id;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
     }
 
 }
